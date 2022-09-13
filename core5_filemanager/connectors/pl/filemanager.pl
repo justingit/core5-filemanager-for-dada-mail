@@ -22,7 +22,7 @@ use lib "$FindBin::Bin/../../../../cgi-bin/dada/DADA/App/Support";
 # <!-- tmpl_if additional_perllibs -->
 # Additional Perl Libraries:
 #<!-- tmpl_loop additional_perllibs -->
-#		use lib "<!-- tmpl_var name default='' -->";
+		use lib "<!-- tmpl_var name default='' -->";
 # <!-- /tmpl_loop -->
 #/ Additional Perl Libraries:
 #<!-- /tmpl_if -->
