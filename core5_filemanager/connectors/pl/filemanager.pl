@@ -48,7 +48,7 @@ use strict;
 use Try::Tiny;
 
 our $q;
-my $t = 1;
+my $t = 0;
 
 &check_security();
 
