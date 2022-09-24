@@ -1,9 +1,6 @@
 #!/usr/bin/perl
 
-# So remember we need to copy this into dada/installer-bak...
-#(how should we do that?!)
-
-use CGI::Carp qw(fatalsToBrowser);
+# use CGI::Carp qw(fatalsToBrowser);
 
 use Carp qw(croak carp);
 
@@ -21,17 +18,13 @@ use lib "$FindBin::Bin/../../../../cgi-bin/dada";
 use lib "$FindBin::Bin/../../../../cgi-bin/dada/DADA/perllib";
 use lib "$FindBin::Bin/../../../../cgi-bin/dada/DADA/App/Support";
 
-# 
+# <!-- tmpl_if additional_perllibs -->
 # Additional Perl Libraries:
-#
-		use lib "/Users/justin/testserver/dada";
-# 
-		use lib "/Users/justin/testserver/dada/DADA/perllib";
-# 
-		use lib "/Users/justin/testserver/dada/DADA/App/Support";
-# 
+#<!-- tmpl_loop additional_perllibs -->
+		use lib "<!-- tmpl_var name default='' -->";
+# <!-- /tmpl_loop -->
 #/ Additional Perl Libraries:
-#
+#<!-- /tmpl_if -->
 
 #die $FindBin::Bin;
 
